@@ -2,27 +2,32 @@ package Model;
 
 public class Carta {
 
-    private Cartas cartasEnum;
-    private CoresEnum coresEnum;
+    private Valor valor;
+    public Cor cor;
 
-    public Carta(Cartas cartasEnum, CoresEnum coresEnum) {
-        this.cartasEnum = cartasEnum;
-        this.coresEnum = coresEnum;
+    public Carta(Valor valor, Cor cor) {
+        this.valor = valor;
+        this.cor = cor;
     }
 
-    public Cartas getCartasEnum() {
-        return cartasEnum;
+    public Valor getValor() {
+        return valor;
     }
 
-    public CoresEnum getCoresEnum() {
-        return coresEnum;
+    public Cor getCor() {
+        return cor;
     }
 
-    public void setCartasEnum(Cartas cartasEnum) {
-        this.cartasEnum = cartasEnum;
+    public void setValor(Valor valor) {
+        this.valor = valor;
     }
 
-    public void setCoresEnum(CoresEnum coresEnum) {
-        this.coresEnum = coresEnum;
+    public void setCor(Cor cor) {
+        this.cor = cor;
+    }
+
+    public String toString(){
+        String carta = "Carta:" + getValor() + getCor();
+        return carta;
     }
 }
